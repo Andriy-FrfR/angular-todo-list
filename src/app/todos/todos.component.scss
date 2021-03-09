@@ -1,0 +1,26 @@
+.todo-list {
+  border: solid 1px #000;
+  list-style: none;
+}
+
+.todo-item {
+  position: relative;
+  margin: 10px 4px 10px 4px;
+
+  border: solid 1px #000;
+
+  input {
+    display: inline-block;
+  }
+
+  button {
+    position: absolute;
+    right: 20px;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: red;
+    color: #fff;
+  }
+}
