@@ -30,4 +30,12 @@ export class TodosService {
       }
     });
   }
+
+  addTodo(todoTitle: string): void {
+    this.todos.push({
+      id: Date.now(),
+      title: todoTitle,
+      completed: false
+    });
+  }
 }

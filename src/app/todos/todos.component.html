@@ -1,11 +1,14 @@
 <div *ngIf="!loading">
   <ul class="todo-list">
-    <li class="todo-item" *ngFor="let todo of todosService.todos">
-      {{ todo.id }}
-      <input type="checkbox">
+    <li class="todo-item" *ngFor="let todo of todos; let i = index">
+      {{ i + 1 }}
+      <input
+        type="checkbox"
+        [(ngModel)]="todo.completed"
+      >
       {{ todo.title }}
       {{ todo?.date }}
-      <button (click)="todosService.deleteTodo(todo.id)">X</button>
+      <button (click)="deleteTodo(todo.id)">X</button>
     </li>
   </ul>
 </div>
