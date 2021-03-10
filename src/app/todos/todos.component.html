@@ -1,12 +1,12 @@
 <div *ngIf="!loading">
   <ul class="todo-list">
     <li class="todo-item" *ngFor="let todo of todos; let i = index">
-      {{ i + 1 }}
+      {{ i + 1 }}.
       <input
         type="checkbox"
         [(ngModel)]="todo.completed"
       >
-      {{ todo.title }}
+      <div class="todo-item-title">{{ todo.title }}</div>
       {{ todo?.date }}
       <button (click)="deleteTodo(todo.id)">X</button>
     </li>

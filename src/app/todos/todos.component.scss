@@ -4,22 +4,45 @@
 
 .todo-item {
   position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+
   margin: 10px 4px 10px 4px;
+  padding: 0 0 0 5px;
 
   border: solid 1px #000;
 
-  input {
+  background-color: #fff;
+
+  &-title {
     display: inline-block;
+    max-width: 500px;
+
+    margin: 0 0 0 5px;
+
+    word-break: break-all;
+  }
+
+  input {
+    margin: 0 0 0 5px;
+    border-radius: 5px;
   }
 
   button {
     position: absolute;
-    right: 20px;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
 
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
 
     background-color: red;
     color: #fff;
+    cursor: pointer;
   }
 }

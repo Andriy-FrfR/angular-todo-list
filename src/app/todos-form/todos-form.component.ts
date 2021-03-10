@@ -15,6 +15,9 @@ export class TodosFormComponent implements OnInit {
   }
 
   addTodo(): void {
-    this.todosService.addTodo(this.title);
+    if (this.title !== '') {
+      this.todosService.addTodo(this.title);
+      this.title = '';
+    }
   }
 }

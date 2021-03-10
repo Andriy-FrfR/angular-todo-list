@@ -1,11 +1,32 @@
+.container {
+  margin: 10px 0 0 0;
+}
+
 input {
   width: 80%;
+  height: 22px;
 
   margin: 0 0 10px 5px;
+
+  &::placeholder {
+    font-style: italic;
+  }
 }
 
 button {
+  height: 22px;
+
   margin: 0 0 0 5px;
+  padding: 0 5px;
+
+  border: none;
+  border-radius: 10px;
 
   background-color: lightgreen;
+  line-height: 20px;
+
+  &:hover {
+    background-color: green;
+    cursor: pointer;
+  }
 }
